@@ -1,0 +1,37 @@
+<app-header>
+    <h1>Logo</h1>
+</app-header>
+
+<div class="movies-container">
+    <div class="row">
+        <div class="language">
+            <h4>Languages:</h4>
+            <div *ngFor="let language of languages">
+                <input type="checkbox" [checked]="language.checked" (change)="onLanguageSelected(language.name)">
+                <label [for]="language.name">
+                    {{ language.name }}
+                </label>
+            </div>
+        </div>
+        <div class="genre">
+            <h4>Genres:</h4>
+            <div *ngFor="let genre of genres">
+                <input type="checkbox" [checked]="genre.checked" (change)="onGenreSelected(genre.name)">
+                <label [for]="genre.name">
+                    {{ genre.name }}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="movie-cards-container">
+        <div class="movie-card-wrapper" *ngFor="let movie of filteredMovies">
+            <app-card [movie]="movie"></app-card>
+        </div>
+
+    </div>
+</div>
+
+
+<app-footer>
+    &copy; 2022 copyright Movie List
+</app-footer>

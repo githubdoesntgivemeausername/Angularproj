@@ -1,0 +1,11 @@
+.movies-container{
+    display:flex;
+    }
+    
+    .movie-cards-container{
+    
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:1rem;
+    
+    }

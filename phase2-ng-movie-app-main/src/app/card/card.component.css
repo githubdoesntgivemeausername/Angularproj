@@ -1,0 +1,13 @@
+.card{
+    float: left;
+    max-width: 350px;
+    min-width: 350px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.card img{
+    min-width: 100%;
+    aspect-ratio: 1/1;
+}
+
